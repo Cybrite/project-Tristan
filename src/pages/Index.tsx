@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Search } from "lucide-react";
@@ -36,7 +35,7 @@ const Index = () => {
               className="text-center"
             >
               <div className="text-4xl md:text-6xl font-serif mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
-                Verses
+                The poetic press
               </div>
               <motion.div
                 initial={{ width: 0 }}

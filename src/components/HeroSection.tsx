@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -6,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentLine, setCurrentLine] = useState(0);
-  
+
   const heroLines = [
     "Where words dance",
     "and stories breathe",
-    "in digital verse"
+    "in digital verse",
   ];
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const HeroSection = () => {
   const scrollToContent = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -66,11 +65,14 @@ const HeroSection = () => {
         >
           <Link to="/gallery">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(168, 85, 247, 0.4)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(168, 85, 247, 0.4)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg"
             >
-              Explore Verses
+              Explore The poetic press
             </motion.button>
           </Link>
         </motion.div>

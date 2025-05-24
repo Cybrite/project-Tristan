@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# The poetic press: Digital Poetry Showcase
 
-## Project info
+A modern, interactive web application for showcasing poetry with elegant animations and an immersive reading experience.
 
-**URL**: https://lovable.dev/projects/005126b9-62ac-4072-af51-c3406d31b05c
+![The poetic press Poetry Showcase](https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748107735/sr5za5e1203759aws3_rhzftt.png)
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **Interactive Poetry Reading**: Animated stanza-by-stanza reading experience
+- **Curated Gallery**: Browse poems with filtering by category and mood
+- **Responsive Design**: Fully optimized for mobile and desktop experiences
+- **Elegant Animations**: Smooth transitions and micro-interactions throughout
+- **Dark Mode**: Beautiful dark theme with gradient accents
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/005126b9-62ac-4072-af51-c3406d31b05c) and start prompting.
+- **React 18** with TypeScript
+- **Vite** for fast development and optimized builds
+- **React Router** for navigation
+- **Framer Motion** for high-quality animations
+- **Tailwind CSS** for styling
+- **Shadcn UI** components
+- **React Query** for data management
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v16+)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+   ```bash
+   git clone https://your-repository-url/project-tristan.git
+   cd project-tristan
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
 
-# Step 3: Install the necessary dependencies.
-npm i
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and visit `http://localhost:8080`
+
+## 📁 Project Structure
+
+```
+project-tristan/
+├── src/
+│   ├── components/     # Reusable UI components
+│   │   ├── ui/         # Shadcn UI components
+│   │   └── ...         # Custom components
+│   ├── data/           # Static data for poems
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utilities and helpers
+│   ├── pages/          # Page components
+│   └── App.tsx         # Main application component
+├── public/             # Static assets
+├── index.html          # HTML entry point
+├── vite.config.ts      # Vite configuration
+└── tailwind.config.ts  # Tailwind CSS configuration
 ```
 
-**Edit a file directly in GitHub**
+## 🔍 Features Breakdown
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Home Page
 
-**Use GitHub Codespaces**
+- Animated hero section with rotating taglines
+- Featured poems section with hover effects
+- Smooth scrolling navigation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Gallery
 
-## What technologies are used for this project?
+- Interactive poem cards with animations
+- Category and mood filters
+- Search functionality
+- Responsive grid layout
 
-This project is built with:
+### Poem Detail
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Stanza-by-stanza animated reading experience
+- Auto-play reading mode
+- Poem metadata display
+- Previous/next poem navigation
 
-## How can I deploy this project?
+### About
 
-Simply open [Lovable](https://lovable.dev/projects/005126b9-62ac-4072-af51-c3406d31b05c) and click on Share -> Publish.
+- Information about the poet and writing philosophy
+- Contact section
 
-## Can I connect a custom domain to my Lovable project?
+## 🖌️ Styling
 
-Yes, you can!
+The project uses Tailwind CSS with custom configuration. The design features:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Dark theme with purple gradients
+- Custom fonts (Playfair Display for headings, Inter for body text)
+- Glassmorphism effects with backdrop blur
+- Responsive design for all screen sizes
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📦 Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgements
+
+- [Shadcn UI](https://ui.shadcn.com/) for the beautiful UI components
+- [Framer Motion](https://www.framer.com/motion/) for the animation library
+- [Lucide Icons](https://lucide.dev/) for the icon set

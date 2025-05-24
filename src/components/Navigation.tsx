@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
@@ -29,18 +28,14 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
             >
-              Verses
+              The poetic press
             </motion.span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="relative group"
-              >
+              <Link key={item.name} to={item.path} className="relative group">
                 <motion.span
                   whileHover={{ y: -2 }}
                   className={`text-sm uppercase tracking-wider transition-colors ${
@@ -59,7 +54,7 @@ const Navigation = () => {
                 />
               </Link>
             ))}
-            
+
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
