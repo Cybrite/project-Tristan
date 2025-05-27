@@ -8,20 +8,6 @@ interface PoemCardProps {
 }
 
 const PoemCard = ({ poem }: PoemCardProps) => {
-  const getMoodStyle = (mood: string) => {
-    switch (mood.toLowerCase()) {
-      case "contemplative":
-      case "peaceful":
-        return "bg-sage-green/20 text-sage-green";
-      case "introspective":
-        return "bg-literary-gold/20 text-literary-gold";
-      case "nostalgic":
-        return "bg-champagne/20 text-champagne";
-      default:
-        return "bg-muted-rose/20 text-muted-rose";
-    }
-  };
-
   return (
     <Link to={ROUTES.poem(poem.id)}>
       <div className="bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-literary-gold/30 hover:border-literary-gold/60 transition-all duration-300">
@@ -39,16 +25,7 @@ const PoemCard = ({ poem }: PoemCardProps) => {
         <p className="text-warm-gray mb-6 leading-relaxed">{poem.excerpt}</p>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <span className="text-sm text-warm-gray">{poem.date}</span>
-            <span
-              className={`text-xs px-2 py-1 rounded-full ${getMoodStyle(
-                poem.mood
-              )}`}
-            >
-              {poem.mood}
-            </span>
-          </div>
+          <span className="text-sm text-warm-gray">{poem.date}</span>
 
           <motion.div
             className="text-literary-gold group-hover:translate-x-2 transition-transform"

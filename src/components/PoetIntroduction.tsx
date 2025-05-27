@@ -100,7 +100,7 @@ const PoetIntroduction = () => {
                   variants={itemVariants}
                   className="flex flex-wrap gap-3 pt-4"
                 >
-                  {["Contemporary Verse", "Free Form", "Narrative Poetry"].map(
+                  {["Nihilistic", "Free Form", "Narrative"].map(
                     (tag, index) => (
                       <span
                         key={index}

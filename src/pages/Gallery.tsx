@@ -1,9 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 
 import { usePoemFilter } from "@/hooks/use-poem-filter";
-import { ROUTES, ANIMATION_DURATIONS } from "@/lib/constants";
+import { ANIMATION_DURATIONS } from "@/lib/constants";
 import { poemsData } from "@/data/poems";
 import Navigation from "@/components/Navigation";
 import PoemCard from "@/components/poem/PoemCard";
@@ -15,10 +14,7 @@ const Gallery = () => {
     setSearchTerm,
     selectedCategory,
     setSelectedCategory,
-    selectedMood,
-    setSelectedMood,
     categories,
-    moods,
     filteredPoems,
   } = usePoemFilter({ poems: poemsData });
 
@@ -90,7 +86,7 @@ const Gallery = () => {
               />
             </div>
 
-            {/* Category and Mood Filters */}
+            {/* Category Filters */}
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex flex-wrap gap-2">
                 <span className="text-sm text-warm-gray flex items-center mr-2">
@@ -103,21 +99,6 @@ const Gallery = () => {
                     isSelected={selectedCategory === category}
                     onClick={() => setSelectedCategory(category)}
                     variant="gold"
-                  />
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-warm-gray flex items-center mr-2">
-                  Mood:
-                </span>
-                {moods.map((mood) => (
-                  <FilterButton
-                    key={mood}
-                    label={mood}
-                    isSelected={selectedMood === mood}
-                    onClick={() => setSelectedMood(mood)}
-                    variant="rose"
                   />
                 ))}
               </div>

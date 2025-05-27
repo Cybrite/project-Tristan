@@ -4,7 +4,6 @@ export interface Poem {
   category: string;
   date: string;
   readTime: string;
-  mood: string;
   excerpt: string;
   content: string[];
   inspiration?: string;
