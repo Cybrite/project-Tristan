@@ -50,7 +50,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-literary-gradient text-warm-ivory">
       <Navigation />
 
       <div className="pt-24 pb-16 px-6">
@@ -63,12 +63,12 @@ const Gallery = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-serif mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-text-highlight bg-clip-text text-transparent">
                 Poetry Gallery
               </span>
             </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-              Explore a collection of The poetic press that capture moments,
+            <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
+              Explore a collection of The Poetic Press that capture moments,
               emotions, and the beautiful complexity of human experience
             </p>
           </motion.div>
@@ -83,7 +83,7 @@ const Gallery = () => {
             {/* Search */}
             <div className="relative max-w-md mx-auto">
               <Search
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/40"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-warm-gray"
                 size={20}
               />
               <input
@@ -91,14 +91,14 @@ const Gallery = () => {
                 placeholder="Search poems..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-white/10 border border-white/20 rounded-full pl-12 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-purple-400 transition-colors"
+                className="w-full bg-charcoal-slate/60 border border-literary-gold/30 rounded-full pl-12 pr-4 py-3 text-warm-ivory placeholder-warm-gray focus:outline-none focus:border-literary-gold transition-colors backdrop-blur-sm"
               />
             </div>
 
             {/* Category and Mood Filters */}
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-white/60 flex items-center mr-2">
+                <span className="text-sm text-warm-gray flex items-center mr-2">
                   Category:
                 </span>
                 {categories.map((category) => (
@@ -109,8 +109,8 @@ const Gallery = () => {
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm transition-all ${
                       selectedCategory === category
-                        ? "bg-purple-600 text-white"
-                        : "bg-white/10 text-white/70 hover:bg-white/20"
+                        ? "bg-literary-gold text-deep-midnight"
+                        : "bg-charcoal-slate/60 text-warm-gray hover:bg-literary-gold/20 hover:text-champagne"
                     }`}
                   >
                     {category}
@@ -119,7 +119,7 @@ const Gallery = () => {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-white/60 flex items-center mr-2">
+                <span className="text-sm text-warm-gray flex items-center mr-2">
                   Mood:
                 </span>
                 {moods.map((mood) => (
@@ -130,8 +130,8 @@ const Gallery = () => {
                     onClick={() => setSelectedMood(mood)}
                     className={`px-4 py-2 rounded-full text-sm transition-all ${
                       selectedMood === mood
-                        ? "bg-pink-600 text-white"
-                        : "bg-white/10 text-white/70 hover:bg-white/20"
+                        ? "bg-muted-rose text-warm-ivory"
+                        : "bg-charcoal-slate/60 text-warm-gray hover:bg-muted-rose/20 hover:text-champagne"
                     }`}
                   >
                     {mood}
@@ -158,40 +158,40 @@ const Gallery = () => {
                   className="group"
                 >
                   <Link to={`/poem/${poem.id}`}>
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 h-full border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                    <div className="bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-literary-gold/30 hover:border-literary-gold/60 transition-all duration-300">
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-purple-400 uppercase tracking-wider">
+                        <span className="text-sm text-literary-gold uppercase tracking-wider">
                           {poem.category}
                         </span>
-                        <span className="text-sm text-white/50">
+                        <span className="text-sm text-warm-gray">
                           {poem.readTime}
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-serif mb-4 group-hover:text-purple-400 transition-colors">
+                      <h3 className="text-2xl font-serif mb-4 group-hover:text-champagne transition-colors text-warm-ivory">
                         {poem.title}
                       </h3>
 
-                      <p className="text-white/70 mb-6 leading-relaxed">
+                      <p className="text-warm-gray mb-6 leading-relaxed">
                         {poem.excerpt}
                       </p>
 
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <span className="text-sm text-white/50">
+                          <span className="text-sm text-warm-gray">
                             {poem.date}
                           </span>
                           <span
                             className={`text-xs px-2 py-1 rounded-full ${
                               poem.mood === "contemplative"
-                                ? "bg-blue-500/20 text-blue-300"
+                                ? "bg-sage-green/20 text-sage-green"
                                 : poem.mood === "peaceful"
-                                ? "bg-green-500/20 text-green-300"
+                                ? "bg-sage-green/20 text-sage-green"
                                 : poem.mood === "introspective"
-                                ? "bg-purple-500/20 text-purple-300"
+                                ? "bg-literary-gold/20 text-literary-gold"
                                 : poem.mood === "nostalgic"
-                                ? "bg-yellow-500/20 text-yellow-300"
-                                : "bg-pink-500/20 text-pink-300"
+                                ? "bg-champagne/20 text-champagne"
+                                : "bg-muted-rose/20 text-muted-rose"
                             }`}
                           >
                             {poem.mood}
@@ -199,7 +199,7 @@ const Gallery = () => {
                         </div>
 
                         <motion.div
-                          className="text-purple-400 group-hover:translate-x-2 transition-transform"
+                          className="text-literary-gold group-hover:translate-x-2 transition-transform"
                           whileHover={{ x: 5 }}
                         >
                           →
@@ -218,10 +218,10 @@ const Gallery = () => {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <p className="text-2xl text-white/60">
+              <p className="text-2xl text-warm-gray">
                 No poems found matching your criteria
               </p>
-              <p className="text-white/40 mt-2">
+              <p className="text-warm-gray mt-2">
                 Try adjusting your search or filters
               </p>
             </motion.div>

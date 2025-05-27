@@ -38,11 +38,11 @@ const FeaturedPoems = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured The poetic press
+            <span className="bg-text-highlight bg-clip-text text-transparent">
+              Featured The Poetic Press
             </span>
           </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+          <p className="text-xl text-warm-gray max-w-2xl mx-auto">
             Journey through curated pieces that capture the essence of human
             experience
           </p>
@@ -63,29 +63,29 @@ const FeaturedPoems = () => {
               className="group"
             >
               <Link to={`/poem/${poem.id}`}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 h-full border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                <div className="bg-charcoal-slate/60 backdrop-blur-sm rounded-2xl p-8 h-full border border-literary-gold/40 hover:border-literary-gold/80 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-literary-gold/20">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-purple-400 uppercase tracking-wider">
+                    <span className="text-sm text-literary-gold uppercase tracking-wider font-medium">
                       {poem.category}
                     </span>
-                    <span className="text-sm text-white/50">
+                    <span className="text-sm text-warm-gray">
                       {poem.readTime}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-serif mb-4 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-2xl font-serif mb-4 group-hover:text-champagne transition-colors text-warm-ivory">
                     {poem.title}
                   </h3>
 
-                  <p className="text-white/70 mb-6 leading-relaxed">
+                  <p className="text-warm-gray mb-6 leading-relaxed">
                     {poem.excerpt}
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-white/50">{poem.date}</span>
+                    <span className="text-sm text-warm-gray">{poem.date}</span>
 
                     <motion.div
-                      className="text-purple-400 group-hover:translate-x-2 transition-transform"
+                      className="text-literary-gold group-hover:translate-x-2 transition-transform"
                       whileHover={{ x: 5 }}
                     >
                       →
@@ -108,7 +108,7 @@ const FeaturedPoems = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
+              className="border border-literary-gold text-literary-gold hover:bg-accent-gradient hover:text-deep-midnight px-8 py-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
               View All Poems
             </motion.button>

@@ -18,10 +18,10 @@ const PoemDetail = () => {
 
   if (!poem) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white flex items-center justify-center">
+      <div className="min-h-screen bg-literary-gradient text-warm-ivory flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-serif mb-4">Poem not found</h1>
-          <Link to="/gallery" className="text-purple-400 hover:text-purple-300">
+          <Link to="/gallery" className="text-literary-gold hover:text-champagne">
             Return to Gallery
           </Link>
         </div>
@@ -73,7 +73,7 @@ const PoemDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-literary-gradient text-warm-ivory">
       <Navigation />
       
       <div className="pt-24 pb-16 px-6">
@@ -86,27 +86,27 @@ const PoemDetail = () => {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center space-x-4 mb-6">
-              <span className="text-sm text-purple-400 uppercase tracking-wider">
+              <span className="text-sm text-literary-gold uppercase tracking-wider">
                 {poem.category}
               </span>
-              <span className="text-white/40">•</span>
-              <span className="text-sm text-white/60">
+              <span className="text-warm-gray">•</span>
+              <span className="text-sm text-warm-gray">
                 {poem.date}
               </span>
-              <span className="text-white/40">•</span>
-              <span className="text-sm text-white/60">
+              <span className="text-warm-gray">•</span>
+              <span className="text-sm text-warm-gray">
                 {poem.readTime}
               </span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-serif mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-text-highlight bg-clip-text text-transparent">
                 {poem.title}
               </span>
             </h1>
             
             {poem.inspiration && (
-              <p className="text-lg text-white/60 italic max-w-2xl mx-auto">
+              <p className="text-lg text-warm-gray italic max-w-2xl mx-auto">
                 "{poem.inspiration}"
               </p>
             )}
@@ -125,8 +125,8 @@ const PoemDetail = () => {
               onClick={() => setIsPlaying(!isPlaying)}
               className={`px-6 py-3 rounded-full transition-all ${
                 isPlaying 
-                  ? "bg-pink-600 text-white" 
-                  : "bg-white/10 text-white/70 hover:bg-white/20"
+                  ? "bg-muted-rose text-warm-ivory" 
+                  : "bg-charcoal-slate/60 text-warm-gray hover:bg-literary-gold/20 hover:text-champagne"
               }`}
             >
               {isPlaying ? "Pause" : "Play"} Reading
@@ -136,7 +136,7 @@ const PoemDetail = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentStanza(0)}
-              className="px-6 py-3 rounded-full bg-white/10 text-white/70 hover:bg-white/20 transition-all"
+              className="px-6 py-3 rounded-full bg-charcoal-slate/60 text-warm-gray hover:bg-literary-gold/20 hover:text-champagne transition-all"
             >
               Reset
             </motion.button>
@@ -164,7 +164,7 @@ const PoemDetail = () => {
                     <motion.p
                       key={lineIndex}
                       variants={lineVariants}
-                      className="text-xl md:text-2xl font-light leading-relaxed text-white/90 mb-2"
+                      className="text-xl md:text-2xl font-light leading-relaxed text-soft-pearl mb-2"
                       style={{
                         fontFamily: "'Playfair Display', serif"
                       }}
@@ -182,20 +182,20 @@ const PoemDetail = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12"
+            className="bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-8 border border-literary-gold/30 mb-12"
           >
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 mb-2">Mood</h3>
-                <p className="text-white/80 capitalize">{poem.mood}</p>
+                <h3 className="text-sm uppercase tracking-wider text-literary-gold mb-2">Mood</h3>
+                <p className="text-warm-gray capitalize">{poem.mood}</p>
               </div>
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 mb-2">Category</h3>
-                <p className="text-white/80">{poem.category}</p>
+                <h3 className="text-sm uppercase tracking-wider text-literary-gold mb-2">Category</h3>
+                <p className="text-warm-gray">{poem.category}</p>
               </div>
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 mb-2">Reading Time</h3>
-                <p className="text-white/80">{poem.readTime}</p>
+                <h3 className="text-sm uppercase tracking-wider text-literary-gold mb-2">Reading Time</h3>
+                <p className="text-warm-gray">{poem.readTime}</p>
               </div>
             </div>
           </motion.div>
@@ -211,11 +211,11 @@ const PoemDetail = () => {
               <Link to={`/poem/${prevPoem.id}`} className="group">
                 <motion.div
                   whileHover={{ x: -5 }}
-                  className="flex items-center space-x-3 text-white/60 hover:text-white transition-colors"
+                  className="flex items-center space-x-3 text-warm-gray hover:text-warm-ivory transition-colors"
                 >
                   <ChevronLeft size={20} />
                   <div className="text-left">
-                    <p className="text-sm text-purple-400">Previous</p>
+                    <p className="text-sm text-literary-gold">Previous</p>
                     <p className="font-medium">{prevPoem.title}</p>
                   </div>
                 </motion.div>
@@ -228,7 +228,7 @@ const PoemDetail = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-full transition-colors"
+                className="px-6 py-3 bg-literary-gold hover:bg-champagne text-deep-midnight rounded-full transition-colors"
               >
                 Back to Gallery
               </motion.button>
@@ -238,10 +238,10 @@ const PoemDetail = () => {
               <Link to={`/poem/${nextPoem.id}`} className="group">
                 <motion.div
                   whileHover={{ x: 5 }}
-                  className="flex items-center space-x-3 text-white/60 hover:text-white transition-colors"
+                  className="flex items-center space-x-3 text-warm-gray hover:text-warm-ivory transition-colors"
                 >
                   <div className="text-right">
-                    <p className="text-sm text-purple-400">Next</p>
+                    <p className="text-sm text-literary-gold">Next</p>
                     <p className="font-medium">{nextPoem.title}</p>
                   </div>
                   <ChevronRight size={20} />

@@ -24,6 +24,18 @@ export default {
 				'sans': ['Inter', 'sans-serif'],
 			},
 			colors: {
+				// Literary Color Palette
+				'deep-midnight': '#0a0a0f',
+				'charcoal-slate': '#1a1a2e',
+				'warm-ivory': '#f7f5f3',
+				'soft-pearl': '#e8e6e3',
+				'literary-gold': '#d4af37',
+				'champagne': '#f4e4bc',
+				'muted-rose': '#c49991',
+				'sage-green': '#8fae8b',
+				'warm-gray': '#b8b5b2',
+				'deep-charcoal': '#2d2d3a',
+
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -114,6 +126,11 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out'
+			},
+			backgroundImage: {
+				'literary-gradient': 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%)',
+				'accent-gradient': 'linear-gradient(45deg, #d4af37, #f4e4bc)',
+				'text-highlight': 'linear-gradient(90deg, #d4af37, #c49991)',
 			}
 		}
 	},

@@ -36,11 +36,11 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-6xl md:text-8xl font-serif mb-8 leading-tight"
         >
-          <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-text-highlight bg-clip-text text-transparent">
             Poetry
           </span>
           <br />
-          <span className="text-white">Reimagined</span>
+          <span className="text-warm-ivory">Reimagined</span>
         </motion.h1>
 
         {/* Animated Subtitle */}
@@ -51,7 +51,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8 }}
-            className="text-xl md:text-2xl text-white/80 font-light italic"
+            className="text-xl md:text-2xl text-soft-pearl font-light italic"
           >
             {heroLines[currentLine]}
           </motion.p>
@@ -67,12 +67,12 @@ const HeroSection = () => {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(168, 85, 247, 0.4)",
+                boxShadow: "0 20px 40px rgba(212, 175, 55, 0.4)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg"
+              className="bg-accent-gradient text-deep-midnight px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 shadow-lg border border-literary-gold/30 backdrop-blur-sm hover:shadow-literary-gold/30"
             >
-              Explore The poetic press
+              Explore The Poetic Press
             </motion.button>
           </Link>
         </motion.div>
@@ -88,7 +88,7 @@ const HeroSection = () => {
             onClick={scrollToContent}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-white/60 hover:text-white transition-colors"
+            className="text-warm-gray hover:text-literary-gold transition-colors"
           >
             <ChevronDown size={32} />
           </motion.button>

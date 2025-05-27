@@ -18,7 +18,7 @@ const Navigation = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-40 bg-black/20 backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-40 bg-charcoal-slate/80 backdrop-blur-md border-b border-deep-charcoal/50"
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
@@ -26,9 +26,9 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-serif font-bold">
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+              className="bg-text-highlight bg-clip-text text-transparent"
             >
-              The poetic press
+              The Poetic Press
             </motion.span>
           </Link>
 
@@ -40,14 +40,14 @@ const Navigation = () => {
                   whileHover={{ y: -2 }}
                   className={`text-sm uppercase tracking-wider transition-colors ${
                     location.pathname === item.path
-                      ? "text-purple-400"
-                      : "text-white/80 hover:text-white"
+                      ? "text-literary-gold"
+                      : "text-soft-pearl hover:text-warm-ivory"
                   }`}
                 >
                   {item.name}
                 </motion.span>
                 <motion.div
-                  className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"
+                  className="absolute bottom-0 left-0 h-0.5 bg-accent-gradient"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.3 }}
@@ -58,9 +58,9 @@ const Navigation = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              className="p-2 rounded-full bg-deep-charcoal/50 hover:bg-literary-gold/20 transition-colors border border-literary-gold/30"
             >
-              <Search size={18} />
+              <Search size={18} className="text-literary-gold" />
             </motion.button>
           </div>
 
@@ -68,9 +68,9 @@ const Navigation = () => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-full bg-white/10"
+            className="md:hidden p-2 rounded-full bg-deep-charcoal/50 border border-literary-gold/30"
           >
-            <List size={20} />
+            <List size={20} className="text-literary-gold" />
           </motion.button>
         </div>
 
@@ -95,7 +95,7 @@ const Navigation = () => {
                     <Link
                       to={item.path}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block text-white/80 hover:text-white transition-colors"
+                      className="block text-soft-pearl hover:text-literary-gold transition-colors"
                     >
                       {item.name}
                     </Link>
