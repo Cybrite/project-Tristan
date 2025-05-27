@@ -27,7 +27,7 @@ A modern, interactive web application for showcasing poetry with elegant animati
 ### Prerequisites
 
 - Node.js (v16+)
-- npm or yarn
+- Bun
 
 ### Installation
 
@@ -41,17 +41,13 @@ A modern, interactive web application for showcasing poetry with elegant animati
 2. Install dependencies:
 
    ```bash
-   npm install
-   # or
-   yarn install
+   bun install
    ```
 
 3. Start the development server:
 
    ```bash
-   npm run dev
-   # or
-   yarn dev
+   bun run dev
    ```
 
 4. Open your browser and visit `http://localhost:8080`
@@ -114,9 +110,7 @@ The project uses Tailwind CSS with custom configuration. The design features:
 ## 📦 Build for Production
 
 ```bash
-npm run build
-# or
-yarn build
+bun run build
 ```
 
 The build artifacts will be stored in the `dist/` directory.
