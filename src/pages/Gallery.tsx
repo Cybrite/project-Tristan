@@ -1,31 +1,26 @@
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
-import Navigation from "@/components/Navigation";
+
+import { usePoemFilter } from "@/hooks/use-poem-filter";
+import { ROUTES, ANIMATION_DURATIONS } from "@/lib/constants";
 import { poemsData } from "@/data/poems";
+import Navigation from "@/components/Navigation";
+import PoemCard from "@/components/poem/PoemCard";
+import FilterButton from "@/components/ui/FilterButton";
 
 const Gallery = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedMood, setSelectedMood] = useState("All");
-
-  const categories = [
-    "All",
-    ...new Set(poemsData.map((poem) => poem.category)),
-  ];
-  const moods = ["All", ...new Set(poemsData.map((poem) => poem.mood))];
-
-  const filteredPoems = poemsData.filter((poem) => {
-    const matchesSearch =
-      poem.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      poem.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === "All" || poem.category === selectedCategory;
-    const matchesMood = selectedMood === "All" || poem.mood === selectedMood;
-
-    return matchesSearch && matchesCategory && matchesMood;
-  });
+  const {
+    searchTerm,
+    setSearchTerm,
+    selectedCategory,
+    setSelectedCategory,
+    selectedMood,
+    setSelectedMood,
+    categories,
+    moods,
+    filteredPoems,
+  } = usePoemFilter({ poems: poemsData });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,7 +38,7 @@ const Gallery = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: ANIMATION_DURATIONS.slow,
         ease: "easeOut",
       },
     },
@@ -59,7 +54,7 @@ const Gallery = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: ANIMATION_DURATIONS.slow }}
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-serif mb-6">
@@ -68,8 +63,8 @@ const Gallery = () => {
               </span>
             </h1>
             <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-              Explore a collection of The Poetic Press that capture moments,
-              emotions, and the beautiful complexity of human experience
+              Explore a collection of poems that capture moments, emotions, and
+              the beautiful complexity of human experience
             </p>
           </motion.div>
 
@@ -77,7 +72,7 @@ const Gallery = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: ANIMATION_DURATIONS.slow, delay: 0.2 }}
             className="mb-12 space-y-6"
           >
             {/* Search */}
@@ -102,19 +97,13 @@ const Gallery = () => {
                   Category:
                 </span>
                 {categories.map((category) => (
-                  <motion.button
+                  <FilterButton
                     key={category}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    label={category}
+                    isSelected={selectedCategory === category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm transition-all ${
-                      selectedCategory === category
-                        ? "bg-literary-gold text-deep-midnight"
-                        : "bg-charcoal-slate/60 text-warm-gray hover:bg-literary-gold/20 hover:text-champagne"
-                    }`}
-                  >
-                    {category}
-                  </motion.button>
+                    variant="gold"
+                  />
                 ))}
               </div>
 
@@ -123,19 +112,13 @@ const Gallery = () => {
                   Mood:
                 </span>
                 {moods.map((mood) => (
-                  <motion.button
+                  <FilterButton
                     key={mood}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    label={mood}
+                    isSelected={selectedMood === mood}
                     onClick={() => setSelectedMood(mood)}
-                    className={`px-4 py-2 rounded-full text-sm transition-all ${
-                      selectedMood === mood
-                        ? "bg-muted-rose text-warm-ivory"
-                        : "bg-charcoal-slate/60 text-warm-gray hover:bg-muted-rose/20 hover:text-champagne"
-                    }`}
-                  >
-                    {mood}
-                  </motion.button>
+                    variant="rose"
+                  />
                 ))}
               </div>
             </div>
@@ -157,56 +140,7 @@ const Gallery = () => {
                   whileHover={{ y: -10 }}
                   className="group"
                 >
-                  <Link to={`/poem/${poem.id}`}>
-                    <div className="bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-8 h-full border border-literary-gold/30 hover:border-literary-gold/60 transition-all duration-300">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-literary-gold uppercase tracking-wider">
-                          {poem.category}
-                        </span>
-                        <span className="text-sm text-warm-gray">
-                          {poem.readTime}
-                        </span>
-                      </div>
-
-                      <h3 className="text-2xl font-serif mb-4 group-hover:text-champagne transition-colors text-warm-ivory">
-                        {poem.title}
-                      </h3>
-
-                      <p className="text-warm-gray mb-6 leading-relaxed">
-                        {poem.excerpt}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <span className="text-sm text-warm-gray">
-                            {poem.date}
-                          </span>
-                          <span
-                            className={`text-xs px-2 py-1 rounded-full ${
-                              poem.mood === "contemplative"
-                                ? "bg-sage-green/20 text-sage-green"
-                                : poem.mood === "peaceful"
-                                ? "bg-sage-green/20 text-sage-green"
-                                : poem.mood === "introspective"
-                                ? "bg-literary-gold/20 text-literary-gold"
-                                : poem.mood === "nostalgic"
-                                ? "bg-champagne/20 text-champagne"
-                                : "bg-muted-rose/20 text-muted-rose"
-                            }`}
-                          >
-                            {poem.mood}
-                          </span>
-                        </div>
-
-                        <motion.div
-                          className="text-literary-gold group-hover:translate-x-2 transition-transform"
-                          whileHover={{ x: 5 }}
-                        >
-                          →
-                        </motion.div>
-                      </div>
-                    </div>
-                  </Link>
+                  <PoemCard poem={poem} />
                 </motion.div>
               ))}
             </motion.div>
