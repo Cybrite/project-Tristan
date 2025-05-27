@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Search, List } from "lucide-react";
+import { List } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,14 +54,6 @@ const Navigation = () => {
                 />
               </Link>
             ))}
-
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-2 rounded-full bg-deep-charcoal/50 hover:bg-literary-gold/20 transition-colors border border-literary-gold/30"
-            >
-              <Search size={18} className="text-literary-gold" />
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}

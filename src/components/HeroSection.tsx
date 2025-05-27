@@ -7,9 +7,10 @@ const HeroSection = () => {
   const [currentLine, setCurrentLine] = useState(0);
 
   const heroLines = [
-    "Where words dance",
-    "and stories breathe",
-    "in digital verse",
+    "An Ocean of words, waiting to be freed,",
+    "But silence holds them, knowing the need.",
+    "To keep the peace and spare the pain,",
+    "Unspoken truths, quite refrain.",
   ];
 
   useEffect(() => {
@@ -37,10 +38,10 @@ const HeroSection = () => {
           className="text-6xl md:text-8xl font-serif mb-8 leading-tight"
         >
           <span className="bg-text-highlight bg-clip-text text-transparent">
-            Poetry
+            To write
           </span>
           <br />
-          <span className="text-warm-ivory">Reimagined</span>
+          <span className="text-warm-ivory">yet despise</span>
         </motion.h1>
 
         {/* Animated Subtitle */}
