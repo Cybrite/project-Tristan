@@ -28,7 +28,7 @@ const PoemContent = ({
       opacity: 1,
       x: 0,
       transition: {
-        duration: ANIMATION_DURATIONS.slow,
+        duration: ANIMATION_DURATIONS.normal,
         ease: "easeOut",
       },
     },
