@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, SortAsc, SortDesc } from "lucide-react";
 
 import { usePoemFilter } from "@/hooks/use-poem-filter";
 import { ANIMATION_DURATIONS } from "@/lib/constants";
@@ -14,7 +14,12 @@ const Gallery = () => {
     setSearchTerm,
     selectedCategory,
     setSelectedCategory,
+    selectedSubCategory,
+    setSelectedSubCategory,
+    sortOrder,
+    setSortOrder,
     categories,
+    subCategories,
     filteredPoems,
   } = usePoemFilter({ poems: poemsData });
 
@@ -87,7 +92,7 @@ const Gallery = () => {
             </div>
 
             {/* Category Filters */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               <div className="flex flex-wrap gap-2">
                 <span className="text-sm text-warm-gray flex items-center mr-2">
                   Category:
@@ -101,6 +106,53 @@ const Gallery = () => {
                     variant="gold"
                   />
                 ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="text-sm text-warm-gray flex items-center mr-2">
+                  Type:
+                </span>
+                {subCategories.map((subCategory) => (
+                  <FilterButton
+                    key={subCategory}
+                    label={
+                      subCategory === "named"
+                        ? "Named"
+                        : subCategory === "unnamed"
+                        ? "Unnamed"
+                        : "All"
+                    }
+                    isSelected={selectedSubCategory === subCategory}
+                    onClick={() => setSelectedSubCategory(subCategory)}
+                    variant="rose"
+                  />
+                ))}
+              </div>
+
+              <div className="flex gap-2">
+                <span className="text-sm text-warm-gray flex items-center mr-2">
+                  Sort:
+                </span>
+                <FilterButton
+                  label={
+                    <div className="flex items-center">
+                      <SortDesc size={14} className="mr-1" /> Newest
+                    </div>
+                  }
+                  isSelected={sortOrder === "newest"}
+                  onClick={() => setSortOrder("newest")}
+                  variant="green"
+                />
+                <FilterButton
+                  label={
+                    <div className="flex items-center">
+                      <SortAsc size={14} className="mr-1" /> Oldest
+                    </div>
+                  }
+                  isSelected={sortOrder === "oldest"}
+                  onClick={() => setSortOrder("oldest")}
+                  variant="green"
+                />
               </div>
             </div>
           </motion.div>

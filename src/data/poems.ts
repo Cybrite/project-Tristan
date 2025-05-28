@@ -4,6 +4,7 @@ export interface Poem {
   content: string[];
   excerpt: string;
   category: string;
+  subCategory: "named" | "unnamed";
   date: string;
   readTime: string;
   inspiration?: string;
@@ -90,6 +91,7 @@ A tragedy written in first person, present tense, unending.
     excerpt:
       "I scrape myself from the bathroom mirror each morning,Pathetic creature, with your grandiose dreams...",
     category: "Self-Reflection",
+    subCategory: "named",
     date: "April 2025",
     readTime: "5 min",
     inspiration: "Who am I? A question that haunts me daily",
@@ -142,6 +144,7 @@ Until your ghost sets me free.
     excerpt: `Look at my heart,Burned and ruined.
 Look me in my eyes,Can you see?...`,
     category: "Heartbreak",
+    subCategory: "named",
     date: "Febuary 2025",
     readTime: "2 min",
     inspiration: "Reflection on personal struggles and loss",
@@ -189,6 +192,7 @@ Look me in my eyes,Can you see?...`,
     excerpt: `When I will become god,
   There will be no sky but crimson void...`,
     category: "Nihilistic",
+    subCategory: "named",
     date: "January 2025",
     readTime: "3 min",
     inspiration: "I was having a bad day.",
@@ -225,11 +229,11 @@ Is it death? That I must cease ?!!
     excerpt: `Why am I so numb inside,
     Extension of me so dumb, no place to hide?...`,
     category: "Existential",
+    subCategory: "named",
     date: "March 2025",
     readTime: "1 min",
     inspiration: "Numb is a feeling I often experience",
   },
-
   {
     id: "5",
     title: "Unspoken Love on the wind",
@@ -267,6 +271,7 @@ And settled on you, soft as a tale.
     ],
     excerpt: `Your siblings never asked for your love, did they?...`,
     category: "Love and Relationships",
+    subCategory: "named",
     date: "October 2024",
     readTime: "1 min",
     inspiration: "Observations from a favorite café",
@@ -315,8 +320,347 @@ We will meet again to eat Tachibana.
     excerpt: `Loved a Knight, on first sight,
 Took her sword in my pride...`,
     category: "Self-Reflection",
+    subCategory: "named",
     date: "August 2024",
     readTime: "2 min",
     inspiration: "A dream I had about a knight",
+  },
+  {
+    id: "7",
+    title: "Poem 16th",
+    content: [
+      `My queen ,My princess,
+Stay here with me.
+You are my shooting star,
+You are pendant to my heart.
+
+You are so far away from here,
+You are so calm, and my soul demere.
+
+My princess, My Queen, 
+You were never near and I was never far.
+As I hold you,while our hearts spar.
+
+Tell me,How many more scars till,
+We are no more apart.`,
+    ],
+    excerpt: `My queen, My princess...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "October 2023",
+    readTime: "1 min",
+    inspiration: "Last time i was in love, I wrote this poem",
+  },
+  {
+    id: "8",
+    title: "Poem 22nd",
+    content: [
+      `Raft of the soul,
+Filled with miserable gold,
+Headed for the strait dark blue,
+Following the love clue?!?
+
+Raft of certain malignant,
+Stench of death never so fragrant,
+Serpent of sea quenches his thirst,
+With the sorrows of hearts turned like foul august!
+
+Thinking about the ship sank long ago,
+How long on this raft, must I go?
+
+Sun of sins ,
+burns my skin.
+Hunger of love,
+but food is not something all deserve.
+
+As my lips dry out of kindness,
+And skin blister with regrets,
+Eyes hollow of hope,
+Leaving my heart with grief untold,
+
+On this raft as I lay,
+Even when I reach ashore, what will I retain?`,
+    ],
+    excerpt: `Raft of the soul...`,
+    category: "Self-Reflection",
+    subCategory: "unnamed",
+    date: "August 2024",
+    readTime: "2 min",
+    inspiration: "Struggling with my own thoughts",
+  },
+  {
+    id: "9",
+    title: "A night in my Dreams",
+    content: [
+      `if I may sleep on your lap,
+Will you lemme see stars in your eyes.
+If I bleed in your arms,
+Will your hands lemme use them as cotton.
+Can we talk about our sins,
+We have long forgotten.
+
+To see you as a object of flesh,
+And let you feel me as a sculpt hollow,
+Hold you in my arms,
+Like there's no tomorrow,
+But the thrones of past pinch like unfixed sorrow.
+
+Not fond of this bond's stagnation,
+But you only flow in my imagination.
+
+Tell me O maiden crimson eyed,
+Skin pale and demeanour so sweet, and skin of golden hide,
+What's the price of things I ask?
+Will the payment of my love, suffice??`,
+    ],
+    excerpt: `if I may sleep on your lap,
+Will you lemme see stars in your eyes....`,
+    category: "Love and Relationships",
+    subCategory: "named",
+    date: "October 2024",
+    readTime: "2 min",
+    inspiration: "Felt like writing a poem about love",
+  },
+  {
+    id: "10",
+    title: "Poem 25th",
+    content: [
+      `How does it feels to remember,
+Deep in your heart flaming ambers.
+Burning so bright that you forgot,
+But the shadow it casts, still remembers.
+
+Holding hand, futile try,
+As Resolve of once heart waver,
+I can't cry,
+So I bleed on paper.
+
+How to fix what was never broken ?,
+How to steal what was destined ?,
+How to forget what was to be remembered?,
+and How to write what was meant to be said?
+
+Have faded image of a face,
+forbidden tune is a voice,
+In fades is some memories.
+
+Locked in depth of my heart,
+Cage strong as titan's wall,
+something lurks, that is to fear,
+something or someone i hold so Dear.
+
+Unknown of the hurt, i forgot i need both not one,
+now this is the hill i die on.`,
+    ],
+    excerpt: `How does it feels to remember,
+Deep in your heart flaming ambers..`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "October 2024",
+    readTime: "2 min",
+    inspiration: "A moment of reflection on lost love",
+  },
+  {
+    id: "11",
+    title: "Garden in Arms",
+    content: [
+      `With my hands stretched out,
+And garden in my arms.
+Shower of tears from my eyes,
+Flowers the plant of my own harm.
+
+Roses to lovers,
+Dahlia to strong,
+Tulips to friends,
+A Garden to those whose life ends.
+
+Touching their roots is a mesh of connected sorrows,
+Misery Is the soil,
+Making the flowers throny and vile.
+
+Looking at the field with colorful wonders,
+What will happen if I kiss lavenders ?🪻
+
+Fullfiled and defiled,
+Bloomed and rotten,
+Such a weak stem,
+Crushed by wind,and to be forgotten.`,
+    ],
+    excerpt: `With my hands stretched out,
+And garden in my arms...`,
+    category: "Existential",
+    subCategory: "named",
+    date: "November 2024",
+    readTime: "1 min",
+    inspiration: "Flowers of Evil.",
+  },
+  {
+    id: "12",
+    title: "Poem 29th",
+    content: [
+      `Owl on my shoulder,
+Speaks my mind,
+Speech is sharp and bolder,
+Words of despise.
+
+Stalks my dreams at night,
+filling them with copper and lies,
+Sees no truth,But tells many,
+Has no bonds, but breaks many.
+Under its gaze, nothing's in harmony.
+
+Fear is love and Love is fear,
+It Always reminds me, I have lost my soul demear.
+
+It flies around my horizon,
+And hoots at every step,
+It sees every inch,
+And feeds on my flesh.
+
+Each piece it tears,
+Takes away memories of my years,
+Retells me in its voice in my ears.
+
+Soon it will eat me to bone,
+With,
+No stories to tell,
+No shoulder to hold,
+No dreams to stalk,
+And love to fear,
+It would make my smile disappear.
+
+Moving forward like a tumbling husk,
+No stop from dawn to dusk.`,
+    ],
+    excerpt: `Owl on my shoulder,
+Speaks my mind...`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "December 2024",
+    readTime: "2 min",
+    inspiration: "Got back into depression",
+  },
+  {
+    id: "13",
+    title: "Poem 31st",
+    content: [
+      `A love so pure, a love so deep,
+A heart that yearns, a soul that’s asleep.
+
+“I love you so much, I love you lots,
+My heart melts like chocolate, when you cross my thoughts,”
+A sweet surrender, a lover’s knots.
+
+A celestial promise, a shooting star’s flight,
+A wish eternal, pure and bright.
+Though wings may be broken, dreams take flight,
+A spirit unbroken, a hopeful sight.
+
+A love so enduring, a bond so strong,
+A timeless melody, a heartfelt song.`,
+    ],
+    excerpt: `A love so pure, a love so deep,
+A heart that yearns, a soul that’s asleep...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "January 2025",
+    readTime: "1 min",
+    inspiration: "Writing about love after a long time",
+  },
+  {
+    id: "14",
+    title: "Poem 32nd",
+    content: [
+      `Once upon a time, there lived a wizard,  
+Wandering aimless, a life so haphazard.  
+Traveling alone, with no goal at all,  
+Just endless roads and stories to recall.  
+
+One of his tales, I’ll share with you—  
+Listen closely, it may touch you too.  
+
+He once found a dandelion, soft and small,  
+Breaking apart, losing it all.  
+The wizard knelt and asked with care,  
+"Tell me your story, if you dare."  
+
+The flower spoke in a voice so light,  
+"I wish to fly and touch the sky bright.  
+I want to escape, to break away,  
+And chase the winds far from this place."  
+
+They traveled together through starry skies,  
+Through moonlit dreams and shadowed nights.  
+The tiny bud made him believe again,  
+"Hold on to hope," she said, "my dear.  
+Tie a knot at the end of the rope—  
+And never let go of your thread of hope."  
+
+Eventually, the time drew near,  
+The dandelion whispered, soft and clear,  
+"Wizard, my heart is ready to fly,  
+Grant me the spell to kiss the sky."  
+
+The wizard smiled and said, "Alright,
+You’ll have my spell—take flight tonight."  
+But deep inside, his chest grew tight,  
+For love is hard when you must let it fly.  
+
+He'd grown fond of the tiny bloom,  
+Her laughter had scattered every gloom.  
+Yet he knew she couldn’t stay,  
+For flowers must fly—it’s their way.  
+
+He gave the spell, though it hurt inside,  
+Watching her dance on the wind as her guide.  
+Her golden seeds rose high and free,  
+A bittersweet wish upon the breeze.  
+
+The wizard stood with tear-filled eyes,  
+As she disappeared into the skies.  
+He wandered on with a heavy heart,  
+Through quiet lands, falling apart.  
+A lonely soul with eyes turned cold,  
+Carrying a love he’d never hold.`,
+    ],
+    excerpt: `Once upon a time, there lived a wizard,  
+Wandering aimless, a life so haphazard...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "October 2023",
+    readTime: "4 min",
+    inspiration: "A story about a wizard and a dandelion",
+  },
+  {
+    id: "15",
+    title: "Poem 35th",
+    content: [
+      `To dream big and die for it,
+To see the unseen and search for it.
+To feel it's gaze and not acknowledge it,
+To love it and then burn it.
+
+To dream in blood and die in flame,
+To seek the void and curse it's name.
+To crave it's touch, yet bear the scar,
+To love too close, then break the star.
+
+To dream of you and risk it all,
+To hear love’s whisper, heed its call.
+To feel your gaze, yet look aside,
+To love you deep, then let it die.
+
+To dream so grand and fall with pride,
+To seek the truth where shadows hide.
+To meet its gaze yet show no fear,
+To love, then cast it to the spear.`,
+    ],
+    excerpt: `To dream big and die for it,
+To see the unseen and search for it...`,
+    category: "Nihilistic",
+    subCategory: "unnamed",
+    date: "May 2025",
+    readTime: "1 min",
+    inspiration: "Thinking about dreams and how i give up on them",
   },
 ];

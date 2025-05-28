@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface FilterButtonProps {
-  label: string;
+  label: ReactNode;
   isSelected: boolean;
   onClick: () => void;
   variant?: "gold" | "rose" | "green";
