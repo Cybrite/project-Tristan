@@ -627,7 +627,7 @@ Carrying a love he’d never hold.`,
 Wandering aimless, a life so haphazard...`,
     category: "Love and Relationships",
     subCategory: "unnamed",
-    date: "October 2023",
+    date: "February 2025",
     readTime: "4 min",
     inspiration: "A story about a wizard and a dandelion",
   },
@@ -662,5 +662,228 @@ To see the unseen and search for it...`,
     date: "May 2025",
     readTime: "1 min",
     inspiration: "Thinking about dreams and how i give up on them",
+  },
+  {
+    id: "16",
+    title: "Poem 13th",
+    content: [
+      `A wound, a blade and an unfixed sorrow,
+      where is the peace?, 
+      and the end of golden gallow.
+      
+      As the will of thousands kneel,
+      and despair filled in their eyes,
+      what is that dream? they need.
+      
+      They stood still with the flase iron will,
+      on the remains of depart,
+      and the enemy just moments apart,
+      they killed them with no regard.
+      
+      Now,when rivers are red,
+      rot fills the sky,
+      holding them, why do they cry?`,
+    ],
+    excerpt: `A wound, a blade and an unfixed sorrow...`,
+    category: "Self-Reflection",
+    subCategory: "unnamed",
+    date: "Febuary 2023",
+    readTime: "1 min",
+    inspiration: "Just after Joining NITR.",
+  },
+  {
+    id: "17",
+    title: "Poem 12th",
+    content: [
+      `I will say, I am quiet,
+      without any light,
+      in my eyes,
+      and a heart full of lies,
+      with no respect to the ties.
+
+      No one to look above,
+      none to look behind.
+      Not even my father tried,
+      How come you think,
+      I will trust you Blind?
+      `,
+    ],
+    excerpt: `I will say, I am quite...`,
+    category: "Nihilistic",
+    subCategory: "unnamed",
+    date: "January 2023",
+    readTime: "1 min",
+    inspiration: "Just after JEE results.",
+  },
+  {
+    id: "18",
+    title: "Poem 15th",
+    content: [
+      `I have seen thousands of eyes,
+      but none felt warm as yours,
+      I have been to many places,
+      but with you i find my home.
+      
+      I have held many hands, but
+      I feel the one that will fit is only yours.
+      Nothing has ever touched my heart,
+      other than that sweet voice of yours.
+      
+      if i only exist for you to hurt,
+      I will gladly be your stepping stone,
+      Not just this, but for other life,
+      I will wait,
+      Till i see my name on those lips of yours.`,
+    ],
+    excerpt: `I have seen thousands of eyes,
+      but none felt warm as yours...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "June 2023",
+    readTime: "1 min",
+    inspiration: "Hopeless I am...",
+  },
+  {
+    id: "19",
+    title: "Poem 17th",
+    content: [
+      `Between stars, seas and lands between,
+      What a grace it is to walk on same land as you.
+
+      To look at the stars, through glimmer of your black eyes,
+      and to be able to dream under same stars as you.
+
+      Do you remember me?
+      As fragments of our sweey lie,
+      is flooding my mind with an longing of you.
+      `,
+    ],
+    excerpt: `Betwenn stars, seas abd lands between...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "June 2023",
+    readTime: "1 min",
+    inspiration: "I was delusional back then, and still am.",
+  },
+  {
+    id: "20",
+    title: "Poem 18th",
+    content: [
+      `Who am I?
+      I am open to all,
+      but close to none.
+
+      I am almost never serious,
+      but always calculating.
+      I am an non-believer but,
+      also an hopeless dreamer.
+
+      I avoid being lonely but,
+      Thats where I find my peace.
+
+      I want to burn the world to feel it's warmth,
+      but also to disappear in peace.
+
+      I am but a collection of paradoxes,
+      In thousands of agonies, I exist.
+
+      I am Sybrite.
+      `,
+    ],
+    excerpt: `I am Sybrite...`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "July 2023",
+    readTime: "1 min",
+    inspiration: "About me first try.",
+  },
+   {
+    id: "21",
+    title: "Poem 19th",
+    content: [
+      `Should I talk to you a little longer,
+      Can i illude myself a little further,
+      Will you amuse me a bit more???
+
+      I want to tell you a poem,
+      that is scratched on the wall of my throat.
+
+      Can you preten to understand?
+      till i get bored with myself.
+
+      Too tired, too long, too hurt,
+      to feel hope, to pretend hurt.
+
+      Can you be my illusion?
+      Cause I can't help but,
+      to live in my delusion.
+      `,
+    ],
+    excerpt: `Should I talk to you a little longer...`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "July 2023",
+    readTime: "2 min",
+    inspiration: "Should I text her again?",
+  },
+  {
+    id: "22",
+    title: "Poem 20th",
+    content: [
+      `Mirror, mirror on the wall,
+      What will make me keep her all?
+
+      Should i write a love song,
+      To string her hearts wall.
+      Like a singing siren,
+      in midest of meadow hall.
+
+      Can it be of in ways of sins,
+      So i can pin her with blasphemous grin.
+
+      To see her bathe in vermillion light,
+      touch her lips snow white,
+      keep her heart of all despite.
+
+      Will she ask me "Why?",
+      I may indulge in our lie.
+      `,
+    ],
+    excerpt: `Mirror, mirror on the wall,
+      What will make me keep her all?...`,
+    category: "Self-Reflection",
+    subCategory: "unnamed",
+    date: "August 2023",
+    readTime: "2 min",
+    inspiration: "I was thinking about her, and how to keep her.",
+  },
+  {
+    id: "23",
+    title: "Poem 27th",
+    content: [
+      `Have you ever felt so numb,
+      that even a threat is like,
+      a word from your mum?
+      To be ignored and non-chalant,
+      But admitted nonetheless.
+
+      Can't comprehend, why you suffer so much?,
+      What is meaning of an act foolish as such?
+
+      Tell me,
+      What is it like, to have ambition?
+      Don't you get tired of this repetition?
+      What is this need to get admired?
+
+      Why does every breath has to be of constant hassle?
+      Is it not enough to get a bread and a soft basel?
+      `,
+    ],
+    excerpt: `Have you ever felt so numb...`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "October 2023",
+    readTime: "1 min",
+    inspiration: "Burnout hit me like a truck.",
   },
 ];
