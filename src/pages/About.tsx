@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import PhotoGallery from "@/components/PhotoGallery";
-import { useState } from "react";
+import { photos } from "@/data/about";
 
 const About = () => {
   const containerVariants = {
@@ -26,98 +26,6 @@ const About = () => {
     },
   };
 
-  // Enhanced photo data with more variety
-  const photos = [
-    {
-      id: 1,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628954/photo_2025-05-30_23-41-23_2_l7kv1t.jpg",
-      alt: "Puri Beach",
-      caption: "Visited Puri Beach in Odisha for a time out from exams.",
-      size: "large",
-      featured: false,
-    },
-    {
-      id: 2,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628954/photo_2025-05-30_23-41-21_cw4bxs.jpg",
-      alt: "Amit's GPL",
-      caption: "Amit enjoying his GPL at the SD",
-      size: "medium",
-      featured: false,
-    },
-    {
-      id: 3,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-22_kgsknq.jpg",
-      alt: "Diwali photo with Ayan, Dhruti & Anmol bhaiya",
-      caption: "HN ka kurta loading...",
-      size: "tall",
-      featured: false,
-    },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_o9jayj.jpg",
-      alt: "Holi celebration with friends",
-      caption: "Mandatory Pose on Holi",
-      size: "wide",
-      featured: false,
-    },
-    {
-      id: 5,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_3_mngukl.jpg",
-      alt: "hood",
-      caption: "Nitrutsav with the HOOD! 😎",
-      size: "small",
-      featured: false,
-    },
-    {
-      id: 6,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-24_rysdws.jpg",
-      alt: "3hree idiots",
-      caption: "Generic Kurta pose.🤩",
-      size: "medium",
-      featured: true,
-    },
-    {
-      id: 7,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_4_kme0kq.jpg",
-      alt: "dsc",
-      caption: "Best people you will find.",
-      size: "tall",
-      featured: true,
-    },
-    {
-      id: 8,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_3_tbz8i8.jpg",
-      alt: "ganesh puja",
-      caption: "Ganesh Puja with chemicools",
-      size: "large",
-      featured: false,
-    },
-    {
-      id: 9,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_5_kec37m.jpg",
-      alt: "Backbenchers",
-      caption: "Those who are always there for me.",
-      size: "medium",
-      featured: true,
-    },
-    {
-      id: 10,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-45-10_zbhgdi.jpg",
-      alt: "AsyncMinds",
-      caption: "We are awaiting our promise.",
-      size: "wide",
-      featured: true,
-    },
-    {
-      id: 11,
-      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_2_f7rfrt.jpg",
-      alt: "Hood",
-      caption: "My HOOD.",
-      size: "wide",
-      featured: true,
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-literary-gradient text-warm-ivory">
       <Navigation />
@@ -140,7 +48,8 @@ const About = () => {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-warm-gray max-w-2xl mx-auto leading-relaxed">
-                Where words meet wonder, and The Poetic Press find their voice
+                None to call home, so i created one for myself, a place to be,
+                to die.
               </p>
             </motion.div>
 
@@ -152,37 +61,38 @@ const About = () => {
                     variants={itemVariants}
                     className="text-lg md:text-xl leading-relaxed mb-6 md:mb-8 font-light"
                   >
-                    Welcome to my digital sanctuary of words, where poetry
-                    transcends the traditional page and finds new life in the
-                    realm of interactive storytelling. I am a poet fascinated by
-                    the intersection of technology and timeless human emotions.
+                    So, Welcome to my world of poetry, where words are more or
+                    less a reflection of my sanity and insanity, a place where i
+                    try to explain to you people, how i feel about you, your
+                    world and the universe.
                   </motion.p>
 
                   <motion.p
                     variants={itemVariants}
                     className="text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-warm-gray"
                   >
-                    My work explores the contemporary human experience through
-                    the lens of both ancient wisdom and modern innovation. Each
-                    piece is crafted to resonate across generations, bridging
-                    the gap between traditional verse and digital expression.
+                    My work dwells in the spaces between breath and silence,
+                    where emotion bleeds into the void. I write from the marrow
+                    of existence—the weight we carry and the quiet violence of
+                    being. Each poem is a fragment pulled from depths where
+                    certainty dissolves.
                   </motion.p>
 
                   <motion.p
                     variants={itemVariants}
                     className="text-base md:text-lg leading-relaxed text-warm-gray"
                   >
-                    Through this platform, I invite you to experience poetry not
-                    just as words on a page, but as an immersive journey through
-                    emotion, thought, and the boundless possibilities of human
-                    creativity.
+                    Through this platform i created, I invite you to experience
+                    poetry not just as words on a page, but as an immersive
+                    journey through emotion, thought, and the boundless
+                    possibilities of human creativity.
                   </motion.p>
                 </div>
               </div>
             </motion.div>
 
             {/* Philosophy Section */}
-            <motion.div variants={itemVariants} className="mb-10 md:mb-16">
+            {/* <motion.div variants={itemVariants} className="mb-10 md:mb-16">
               <h2 className="text-2xl md:text-3xl font-serif mb-6 md:mb-8 text-center">
                 <span className="bg-text-highlight bg-clip-text text-transparent">
                   Writing Philosophy
@@ -246,13 +156,9 @@ const About = () => {
                   </p>
                 </motion.div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
-            <PhotoGallery
-              photos={photos}
-              title="Visual Journey"
-              subtitle="Moments captured through the lens of poetry and life"
-            />
+            <PhotoGallery photos={photos} />
 
             {/* Contact Section */}
             <motion.div
@@ -278,15 +184,7 @@ const About = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-accent-gradient text-deep-midnight px-8 py-3 rounded-full font-medium transition-all duration-300"
                 >
-                  Get in Touch
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-literary-gold text-literary-gold hover:bg-literary-gold hover:text-deep-midnight px-8 py-3 rounded-full transition-all duration-300"
-                >
-                  Newsletter
+                  <a href="mailto:harshtanishq2002@gmail.com">Get in Touch</a>
                 </motion.button>
               </div>
             </motion.div>

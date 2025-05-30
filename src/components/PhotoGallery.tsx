@@ -19,12 +19,11 @@ interface PhotoGalleryProps {
 
 const PhotoGallery = ({
   photos,
-  title = "Visual Journey",
-  subtitle = "Moments captured through the lens of poetry and life",
+  title = "My Beacons of Hope",
+  subtitle = "Few people who are still shine bright in my eyes, my beacons of hope.",
 }: PhotoGalleryProps) => {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
-  // Sort photos to show featured ones first
   const sortedPhotos = [...photos].sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
@@ -184,11 +183,6 @@ const PhotoGallery = ({
             </span>
             <span className="w-1 h-1 bg-warm-gray/50 rounded-full" />
             <span className="text-warm-gray">Total: {sortedPhotos.length}</span>
-            <span className="w-1 h-1 bg-warm-gray/50 rounded-full hidden sm:block" />
-            <span className="text-warm-gray hidden sm:inline">
-              Click to explore
-            </span>
-            <span className="text-warm-gray sm:hidden">Tap to view</span>
           </div>
         </motion.div>
       </motion.div>
