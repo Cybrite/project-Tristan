@@ -797,7 +797,7 @@ To see the unseen and search for it...`,
     readTime: "1 min",
     inspiration: "About me first try.",
   },
-   {
+  {
     id: "21",
     title: "Poem 19th",
     content: [
@@ -885,5 +885,39 @@ To see the unseen and search for it...`,
     date: "October 2023",
     readTime: "1 min",
     inspiration: "Burnout hit me like a truck.",
+  },
+  {
+    id: "24",
+    title: "Time",
+    content: [
+      `In a time that was,
+      But now is past,
+      How do you hold,
+      on to memories..?
+      That you wish,
+      you could've made last.
+      How precious they are,
+      those early memories.
+
+      A baby's first smile,
+      tender and so, so very sweet.
+      Holding your hand,
+      with their little fingers,
+
+      eyes sparkling up to you,
+      filled with mirth and wonder!
+      Such innocence and simplicity,
+      The childhood.
+      It is to these memories,
+      that my heart fondly wanders.
+      `,
+    ],
+    excerpt: `In a time that was,
+      But now is past...`,
+    category: "Existential",
+    subCategory: "named",
+    date: "October 2020",
+    readTime: "2 min",
+    inspiration: "This poem is too long, i dont remember what it was about.",
   },
 ];
