@@ -57,7 +57,7 @@ const PhotoGallery = ({
         transition={{ duration: 0.8 }}
         className="mb-10 md:mb-16"
       >
-        {/* Header - Mobile Optimized */}
+        {/* Header */}
         <div className="text-center mb-6 md:mb-12 px-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-3 md:mb-4">
             <span className="bg-text-highlight bg-clip-text text-transparent">
@@ -69,7 +69,7 @@ const PhotoGallery = ({
           </p>
         </div>
 
-        {/* Gallery Grid - Mobile Optimized */}
+        {/* Gallery Grid */}
         <motion.div layout className="relative px-2 sm:px-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {sortedPhotos.map((photo, index) => (
@@ -81,7 +81,7 @@ const PhotoGallery = ({
                 exit={{ opacity: 0, scale: 0.9, y: 30 }}
                 transition={{
                   duration: 0.5,
-                  delay: index * 0.05, // Reduced delay for mobile
+                  delay: index * 0.05,
                   type: "spring",
                   stiffness: 120,
                   damping: 20,
@@ -104,7 +104,7 @@ const PhotoGallery = ({
                     whileTap={{ scale: 0.98 }} // Added tap feedback
                   />
 
-                  {/* Featured Star - Mobile Optimized */}
+                  {/* Featured Star */}
                   {photo.featured && (
                     <motion.div
                       initial={{ scale: 0, rotate: -180 }}
@@ -120,13 +120,13 @@ const PhotoGallery = ({
                     </motion.div>
                   )}
 
-                  {/* Mobile-First Hover Overlay */}
+                  {/* Hover Overlay */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     className="absolute inset-0 bg-gradient-to-t from-deep-midnight/90 via-deep-midnight/20 to-transparent opacity-0 group-active:opacity-100 transition-opacity duration-300"
                   >
-                    {/* Caption - Mobile Optimized */}
+                    {/* Caption */}
                     <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6">
                       <motion.div
                         initial={{ y: 20, opacity: 0 }}
@@ -147,7 +147,7 @@ const PhotoGallery = ({
                     </div>
                   </motion.div>
 
-                  {/* Touch-Friendly Click Indicator */}
+                  {/* Click Indicator */}
                   <motion.div
                     className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300"
                     whileHover={{ scale: 1.05 }}
@@ -170,7 +170,7 @@ const PhotoGallery = ({
           </div>
         </motion.div>
 
-        {/* Gallery Stats - Mobile Optimized */}
+        {/* Gallery Stats */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -187,7 +187,7 @@ const PhotoGallery = ({
         </motion.div>
       </motion.div>
 
-      {/* Mobile-Optimized Lightbox Modal */}
+      {/* Lightbox Modal */}
       {selectedPhoto && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -203,7 +203,7 @@ const PhotoGallery = ({
             className="relative max-w-4xl max-h-[95vh] sm:max-h-[90vh] w-full bg-charcoal-slate/40 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden border border-literary-gold/30"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Mobile-Optimized Header */}
+            {/* Header */}
             <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-deep-midnight/80 to-transparent p-3 sm:p-4 flex justify-between items-center">
               <div className="flex space-x-2">
                 <button
@@ -228,7 +228,6 @@ const PhotoGallery = ({
               </button>
             </div>
 
-            {/* Mobile-Optimized Image */}
             <div className="relative">
               <img
                 src={selectedPhoto.url}
