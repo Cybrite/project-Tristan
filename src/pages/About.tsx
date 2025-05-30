@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import PhotoGallery from "@/components/PhotoGallery";
+import { useState } from "react";
 
 const About = () => {
   const containerVariants = {
@@ -24,12 +26,106 @@ const About = () => {
     },
   };
 
+  // Enhanced photo data with more variety
+  const photos = [
+    {
+      id: 1,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628954/photo_2025-05-30_23-41-23_2_l7kv1t.jpg",
+      alt: "The poet at a reading session",
+      caption: "Reading poetry at the Literary Festival",
+      category: "normal",
+      size: "large",
+      featured: true,
+    },
+    {
+      id: 2,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628954/photo_2025-05-30_23-41-21_cw4bxs.jpg",
+      alt: "Poetry workshop group",
+      caption: "Leading the Writers Workshop in Spring 2023",
+      category: "normal",
+      size: "medium",
+      featured: false,
+    },
+    {
+      id: 3,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-22_kgsknq.jpg",
+      alt: "Writing by the ocean",
+      caption: "Finding inspiration at the coastline retreat",
+      category: "personal",
+      size: "tall",
+      featured: false,
+    },
+    {
+      id: 4,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_o9jayj.jpg",
+      alt: "Literary conference panel",
+      caption: "Panel discussion on 'The Future of Digital Poetry'",
+      category: "events",
+      size: "wide",
+      featured: false,
+    },
+    {
+      id: 5,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_3_mngukl.jpg",
+      alt: "In the writing studio",
+      caption: "Where the words come alive",
+      category: "personal",
+      size: "small",
+      featured: false,
+    },
+    {
+      id: 6,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-24_rysdws.jpg",
+      alt: "Book signing event",
+      caption: "Meeting readers at the book launch",
+      category: "events",
+      size: "medium",
+      featured: false,
+    },
+    {
+      id: 7,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628953/photo_2025-05-30_23-41-23_4_kme0kq.jpg",
+      alt: "Creative writing workshop",
+      caption: "Guiding aspiring poets in their journey",
+      category: "workshops",
+      size: "tall",
+      featured: true,
+    },
+    {
+      id: 8,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_3_tbz8i8.jpg",
+      alt: "Poetry reading performance",
+      caption: "Sharing verses under the evening lights",
+      category: "events",
+      size: "large",
+      featured: false,
+    },
+    {
+      id: 9,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_5_kec37m.jpg",
+      alt: "Quiet moments of reflection",
+      caption: "Contemplating the next verse",
+      category: "personal",
+      size: "medium",
+      featured: false,
+    },
+    {
+      id: 10,
+      url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-45-10_zbhgdi.jpg",
+      alt: "Literary community gathering",
+      caption: "Building connections through shared words",
+      category: "workshops",
+      size: "wide",
+      featured: false,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-literary-gradient text-warm-ivory">
       <Navigation />
 
       <div className="pt-20 md:pt-24 pb-10 md:pb-16 px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -153,6 +249,12 @@ const About = () => {
                 </motion.div>
               </div>
             </motion.div>
+
+            <PhotoGallery
+              photos={photos}
+              title="Visual Journey"
+              subtitle="Moments captured through the lens of poetry and life"
+            />
 
             {/* Contact Section */}
             <motion.div
