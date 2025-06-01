@@ -151,4 +151,12 @@ export const photos = [
     size: "medium",
     featured: false,
   },
+  {
+    id: 20,
+    url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748801992/WhatsApp_Image_2025-06-01_at_23.46.46_sd92na.jpg",
+    alt: "bhojpuri",
+    caption: "Badmosh !!",
+    size: "medium",
+    featured: true,
+  },
 ];
