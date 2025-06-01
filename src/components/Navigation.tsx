@@ -22,7 +22,6 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <Link to="/" className="text-2xl font-serif font-bold">
             <motion.span
               whileHover={{ scale: 1.05 }}
@@ -32,7 +31,6 @@ const Navigation = () => {
             </motion.span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link key={item.name} to={item.path} className="relative group">
@@ -56,7 +54,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -66,7 +63,6 @@ const Navigation = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div

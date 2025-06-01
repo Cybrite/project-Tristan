@@ -30,7 +30,6 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Main Title */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,7 +43,6 @@ const HeroSection = () => {
           <span className="text-warm-ivory">yet despise</span>
         </motion.h1>
 
-        {/* Animated Subtitle */}
         <div className="h-16 mb-12 flex items-center justify-center">
           <motion.p
             key={currentLine}
@@ -58,7 +56,6 @@ const HeroSection = () => {
           </motion.p>
         </div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -78,7 +75,6 @@ const HeroSection = () => {
           </Link>
         </motion.div>
 
-        {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
