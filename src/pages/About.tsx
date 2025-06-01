@@ -91,76 +91,23 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Philosophy Section */}
-            {/* <motion.div variants={itemVariants} className="mb-10 md:mb-16">
-              <h2 className="text-2xl md:text-3xl font-serif mb-6 md:mb-8 text-center">
-                <span className="bg-text-highlight bg-clip-text text-transparent">
-                  Writing Philosophy
-                </span>
+            
+            <motion.div
+              variants={itemVariants}
+              className="text-center bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-literary-gold/30 mb-6 md:mb-8"
+            >
+              <h2 className="text-xl md:text-2xl font-serif mb-3 md:mb-4 text-literary-gold">
+                Acknowledgement
               </h2>
-
-              <div className="grid sm:grid-cols-2 gap-4 md:gap-8">
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="bg-charcoal-slate/40 backdrop-blur-sm rounded-xl p-5 md:p-8 border border-literary-gold/30"
-                >
-                  <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-4 text-literary-gold">
-                    Authenticity
-                  </h3>
-                  <p className="text-warm-gray leading-relaxed text-sm md:text-base">
-                    Every poem emerges from genuine experience, raw emotion, and
-                    unfiltered truth. I believe in the power of vulnerability to
-                    create connection across all boundaries.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="bg-charcoal-slate/40 backdrop-blur-sm rounded-xl p-5 md:p-8 border border-champagne/30"
-                >
-                  <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-4 text-champagne">
-                    Innovation
-                  </h3>
-                  <p className="text-warm-gray leading-relaxed text-sm md:text-base">
-                    Traditional forms meet contemporary expression. I experiment
-                    with structure, rhythm, and digital presentation to push the
-                    boundaries of what poetry can become.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="bg-charcoal-slate/40 backdrop-blur-sm rounded-xl p-5 md:p-8 border border-sage-green/30"
-                >
-                  <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-4 text-sage-green">
-                    Accessibility
-                  </h3>
-                  <p className="text-warm-gray leading-relaxed text-sm md:text-base">
-                    Poetry should speak to everyone. I strive to create work
-                    that is both intellectually stimulating and emotionally
-                    accessible to readers from all walks of life.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="bg-charcoal-slate/40 backdrop-blur-sm rounded-xl p-5 md:p-8 border border-muted-rose/30"
-                >
-                  <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-4 text-muted-rose">
-                    Evolution
-                  </h3>
-                  <p className="text-warm-gray leading-relaxed text-sm md:text-base">
-                    Like life itself, poetry must evolve. Each piece represents
-                    growth, learning, and the endless journey of understanding
-                    ourselves and our world.
-                  </p>
-                </motion.div>
-              </div>
-            </motion.div> */}
+              <p className="text-sm md:text-base text-warm-gray max-w-xl mx-auto italic">
+                Special thanks to my Ayush Ayush 😂, for the name The Poetic
+                Press.
+              </p>
+            </motion.div>
 
             <PhotoGallery photos={photos} />
 
-            {/* Contact Section */}
+           
             <motion.div
               variants={itemVariants}
               className="text-center bg-charcoal-slate/40 backdrop-blur-sm rounded-2xl p-6 md:p-12 border border-literary-gold/30"
