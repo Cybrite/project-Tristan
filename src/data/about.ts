@@ -67,7 +67,7 @@ export const photos = [
     id: 9,
     url: "https://res.cloudinary.com/dqqyuvg1v/image/upload/v1748628952/photo_2025-05-30_23-41-24_5_kec37m.jpg",
     alt: "Backbenchers",
-    caption: "Those who are always there for me.",
+    caption: "Those who were always there for me.",
     size: "medium",
     featured: true,
   },
