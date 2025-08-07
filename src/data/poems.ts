@@ -920,4 +920,139 @@ To see the unseen and search for it...`,
     readTime: "2 min",
     inspiration: "This poem is too long, i dont remember what it was about.",
   },
+  {
+    id: "25",
+    title: "Poem 1st",
+    content: [
+      `Be a star, they say.
+      Bright & beautiful,
+      twinkling in the night sky,
+      standing out in grim dark.
+
+      Be a star, they say.
+      Distant & Dying,
+      Making others smile,
+      But never thinking about self,
+      in a while.
+
+      Be a star, they say.
+      A symbol of hope in grim dark,
+      but eventually joining the dark,
+      and leaving others to find their own spark.
+      `,
+    ],
+    excerpt: `Be a star they say...`,
+    category: "Existential",
+    subCategory: "unnamed",
+    date: "December 2019",
+    readTime: "2 min",
+    inspiration: "My first work, written in 2019 with someone special.",
+  },
+  {
+    id: "26",
+    title: "Poem 3rd",
+    content: [
+      `Hav faith,I was told.
+      Be brave, not a toad.
+      Hold on to every last drop of hope.
+
+      Have faith,
+      Words I believed.
+      Living my life in pursuit of unknown,
+      where my happiness is always shortlived.
+
+      Have faith,
+      The phare i was told.
+      Was nothing but a lie,
+      that was sold.
+      `,
+    ],
+    excerpt: `Have faith...`,
+    category: "Nihilistic",
+    subCategory: "unnamed",
+    date: "Jan 2020",
+    readTime: "2 min",
+    inspiration: "from a time when i was lost.",
+  },  
+  {
+    id: "27",
+    title: "Poem 6th",
+    content: [
+      `It was an 'opeless fancy,
+      it passed me like an April day,
+      But a look and a word and the dreams
+      they stirred!
+      They have stolen my heart away.
+
+      They say time heals all things,
+      They say you can always forget.
+      But the smiles and the tears across the years,
+      They twist my heart-string's yet!
+      `,
+    ],
+    excerpt: `It was an Hopless fancy..`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "Oct 2020",
+    readTime: "2 min",
+    inspiration: "i wrote it after a book i read.",
+  },
+  {
+    id: "28",
+    title: "Poem 9th",
+    content: [
+      `Longing for love, Day and night,
+      I realized all i can do is think of you,
+      Even knowing at the intersection of,
+      yesterday and tomorrow,
+      we won't meet again.
+
+      I still hold on to hope,
+      to change our fate.
+      That a shooting star,
+      will tear this fate apart.
+
+      i see you through the glass of water,
+      Holding it together.
+      I can't drink it with you,
+      Even being so close,
+      I can't hold you.
+      `,
+    ],
+    excerpt: `Longing for low
+    day and night...`,
+    category: "Love and Relationships",
+    subCategory: "unnamed",
+    date: "Nov 2020",
+    readTime: "2 min",
+    inspiration: "missing my sugar in my tea.",
+  },
+    {
+    id: "29",
+    title: "Poem 10th",
+    content: [
+      `Live to Provide,
+      Freedom is when you fulfill your responsibilities,
+      Responsibilities are fulfilled when you die.
+
+      Live to serve,
+      Sins of blood, must dissolve in blood.
+
+      Strife for your vigor,
+      Realize the goal you choose,
+      Count the stars,
+      Till you lose your moon.
+
+      Live to die, Till you realize.
+      Peace that you so yearn,
+      Not something you earn.
+      `,
+    ],
+    excerpt: `Live to Provide..`,
+    category: "Self-Reflection",
+    subCategory: "unnamed",
+    date: "Dec 2020",
+    readTime: "2 min",
+    inspiration: "frustrated with life, wrote this.",
+  },
 ];
